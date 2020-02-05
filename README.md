@@ -2,7 +2,8 @@
 
 -This is a simple game which has created by JavaScript  
 for two players  .
-#####click here to play the game.
+
+###click here to play the game.
 
 ###Technologies:
 -HTML5
