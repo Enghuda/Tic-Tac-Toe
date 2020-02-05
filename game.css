@@ -13,7 +13,7 @@ justify-content: center;
    margin: 100px auto;
 }
 .container #who{
-  width: auto;
+    width: auto;
     height: 50px;
     display: block;
     margin:0 auto;
@@ -43,7 +43,7 @@ background:rgb(49, 33, 47)
 
 }
 .box:hover {
-  outline:none;
+    outline:none;
     box-shadow: rgba(32,33,36,0.28);
     background-color: grey;
     color: white;
