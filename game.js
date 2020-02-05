@@ -16,18 +16,20 @@ button.addEventListener('click', playagame);
 
 
 
-function playagame() {
+function selectwinner(b1, b2, b3) {
+    b1.style.background = 'grey';
+    b2.style.background = 'grey';
+    b3.style.background = 'grey';
+    who.innerHTML = 'you Win the game';
 
-    for (let i = 0; i < box.length; i++) {
+}
 
-        box[i].style.background = 'rgb(49, 33, 47)';
-        box[i].innerHTML = '';
-        box[i].addEventListener('click', clickEvent);
+function selecttie() {
+
+    if (counter == 8) {
+
+        who.innerHTML = 'tie';
     }
-    who.innerHTML = 'Play';
-    counter = 0;
-    gamecheck = false;
-    //console.log(gamecheck);
 }
 
 function clickEvent() {
@@ -47,6 +49,12 @@ function clickEvent() {
     winner();
     counter = counter + 1;
 }
+for (let i = 0; i < box.length; i++) {
+    box[i].addEventListener('click', clickEvent);
+
+}
+
+
 
 function winner() {
 
@@ -111,25 +119,33 @@ function winner() {
         if (counter == 8)
             selecttie();
     }
+    //............................................
 
-    function selectwinner(b1, b2, b3) {
-        b1.style.background = 'grey';
-        b2.style.background = 'grey';
-        b3.style.background = 'grey';
-        who.innerHTML = 'you Win the game';
-
-    }
-
-    function selecttie() {
-
-        if (counter == 8) {
-
-            who.innerHTML = 'tie';
-        }
-    }
+    //check game
     if (gamecheck) {
         clearEvents();
     }
+}
+
+
+/* for (let i = 0; i < box.length; i++) {
+    box[i].addEventListener('click', clickEvent);
+
+} */
+
+//start play
+function playagame() {
+
+    for (let i = 0; i < box.length; i++) {
+
+        box[i].style.background = 'rgb(49, 33, 47)';
+        box[i].innerHTML = '';
+        box[i].addEventListener('click', clickEvent);
+    }       
+    who.innerHTML = '';
+    counter = 0;
+    gamecheck = false;
+    //console.log(gamecheck);
 }
 //clear events
 function clearEvents() {
@@ -139,3 +155,7 @@ function clearEvents() {
 
     }
 }
+/*
+const button = document.querySelector('.reset');
+button.addEventListener('click', playagame); */
+
